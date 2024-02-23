@@ -10,9 +10,9 @@ namespace Console_RPG
             Enemy slime = new Enemy("slime", 100000000, 100000, new Stats(5, 7, 1), 1);
 
             HealthPotionItem potion1 = new HealthPotionItem("Quick Revive", "When everything's been draggin' you down, Grabs you by the hair and pulls you to the ground, If you wanna get up, you need a little revive.", 10, 4, 5);
-            HealthPotionItem potion2 = new HealthPotionItem("Speed Cola", "", 10, 4, 25);
+            HealthPotionItem potion2 = new HealthPotionItem("Speed Cola", "Your hands are slow, your movements sluggish, your lack of speed, just brings you anguish. Just take a sip, you will move faster. Just try it now!", 10, 4, 25);
             HealthPotionItem potion3 = new HealthPotionItem("JuggerNog", "When you need some help to get by, Something to make you feel strong. Reach for Juggernog tonight, Sugar seduction delight!", 10, 4, 50);
-            HealthPotionItem potion4 = new HealthPotionItem("DoubleTap Root Beer", "", 10, 4, 75);
+            HealthPotionItem potion4 = new HealthPotionItem("DoubleTap Root Beer", "Double Tap Rootbeer Jingle: Cowboys can't shoot slow or they'll end up below. When they need some help, they reach for the Root beer shelf (Ye-haa) Cowboys can't shoot slow, or they'll end up below, when they need some help, they reach for the Root beer shelf. YA THIRSTY PARTNER!?", 10, 4, 75);
 
 
 
@@ -45,7 +45,7 @@ namespace Console_RPG
             
             Location GasStation = new Location("7/11", "This 7/11 is in the middle of Nowhere and for some reason the time never changes here is always midnight there might be something affecting time around who knows");
             
-            Location PalletTown = new Location("Pallet town", "This sleepy town lies on the shore, and is primarily known for hosting Professor Oaks lab, as well as for being the hometown of a number of notable Pokémon trainers.");
+            Location PalletTown = new Location("Pallet Town", "This sleepy town lies on the shore, and is primarily known for hosting Professor Oaks lab, as well as for being the hometown of a number of notable Pokémon trainers.");
             
             Location HighHarothgar = new Location("High Hrothgar", "High Hrothgar is a small settlement roughly halfway up the Throat of the World, It is a major landmark and home to the reclusive Greybeards, who are masters of The Voice.");
             
@@ -69,13 +69,26 @@ namespace Console_RPG
 
             Location Antartica = new Location("Antarctica", "Dang it's so cold here my pants are SoB, What is that? you say well it means standing on buisness, anyways it's not the ones im wearing just the ones that were wet from the previous location why did you have to go into the water and is that another pair of pants SoB, y he snowboarding tho?");
 
-            TiltedTowers.SetNearbyLocations();
+            Location StarryNight = new Location("Starry Night", "There is a painting of Starry Night by Vincent van Gogh in the VGD Classroom it looks off might you try to touch it?");
+
+            Location SpidermansHouse = new Location("Spiderman's House (Tom Holland's spidernam) ", "Why is this Spiderman's house here? what about the OG Spidernam");
+
+            Location Sovngarde = new Location("Sovngarde", "How did you even end up here? Sovngarde is the Nordic afterlife created by Shor that exists in Aetherius. Nords who have died valiantly in honorable combat arrive in Sovngarde after death. Fleshly pain and maladies evaporate upon entering its Hall of Valor. Spirits here enjoy mead-drinking and contests of physical prowess.");
+
+            Location Target = new Location("Target", "Target is notable for its focus on upscale, trend-forward merchandise at lower costs. Its stores typically sell general merchandise—including clothing, household goods, electronics, toys, and more");
+
+            Location PizzaHut = new Location("Pizza Hut", "We're the pizza company that lives life unboxed. We have more than 16,000 restaurants and 350,000 team members in more than 100 countries. Whether it's the original Stuffed Crust or putting a pizza in outer space, we never stop driving ourselves to deliver hot pizzas, fast every time – anywhere you want to enjoy it.");
+
+            Location SweatShop = new Location("SweatShop", "How did we even end up here like the thing's they are doing here are Illeagal we should do something to stop this or we can just turn a blind eye to this so that you can keep getting you things off Temu™️");
+
+            TiltedTowers.SetNearbyLocations(north: AmazonWarehouse, east: McDonalds, south: TheBahamas, west: NukeTown2025);
             KinoDerToten.SetNearbyLocations(north: Terminal, east: NukeTown2025, south: TheSkeld);
-
-
-
-
-
+            VGDClassroom.SetNearbyLocations(east: StarryNight, west: GasStation);
+            GasStation.SetNearbyLocations(east: VGDClassroom, south: WoodlandMansion, west: PostCovidWalmart);
+            WoodlandMansion.SetNearbyLocations(north: GasStation);
+            PostCovidWalmart.SetNearbyLocations(north: PalletTown, east: GasStation, west: PreCovidWalmart);
+            PalletTown.SetNearbyLocations(south: PostCovidWalmart, west: StationSquare);
+            PreCovidWalmart.SetNearbyLocations(north: StationSquare, east: PostCovidWalmart, south: FreddyFazbearsPizzaria, west: McDonalds);
 
 
 
