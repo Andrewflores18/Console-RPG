@@ -22,7 +22,7 @@ namespace Console_RPG
 
             Console.WriteLine(slime.stats.strength);
 
-
+            //Location name = new Location() is how you even set up a location
             Location MidTown = new Location("MidTown", "Abandoned and eerie, people say something BIG is lurking in MidTown");
 
             Location KinoDerToten = new Location("Kino Det Toten", "Run down Theater full of undead");
@@ -67,11 +67,11 @@ namespace Console_RPG
 
             Location TheBatcave = new Location("The Batcave", "Whoa So we Have Batman's Batcave™ in this weird Multiverse you should check to see if Alfred Pennyworth is around and say Hi to him for me");
 
-            Location Antartica = new Location("Antarctica", "Dang it's so cold here my pants are SoB, What is that? you say well it means standing on buisness, anyways it's not the ones im wearing just the ones that were wet from the previous location why did you have to go into the water and is that another pair of pants SoB, y he snowboarding tho?");
+            Location Antartica = new Location("Antarctica", "Dang it's so cold here maybe we could go somewhere thats not -71°F next time?");
 
             Location StarryNight = new Location("Starry Night", "There is a painting of Starry Night by Vincent van Gogh in the VGD Classroom it looks off might you try to touch it?");
 
-            Location SpidermansHouse = new Location("Spiderman's House (Tom Holland's spidernam) ", "Why is this Spiderman's house here? what about the OG Spidernam");
+            Location SpidermansHouse = new Location("Spiderman's House (Tom Holland's Spiderman) ", "Why is this Spiderman's house here? what about the OG Spidernam");
 
             Location Sovngarde = new Location("Sovngarde", "How did you even end up here? Sovngarde is the Nordic afterlife created by Shor that exists in Aetherius. Nords who have died valiantly in honorable combat arrive in Sovngarde after death. Fleshly pain and maladies evaporate upon entering its Hall of Valor. Spirits here enjoy mead-drinking and contests of physical prowess.");
 
@@ -79,21 +79,58 @@ namespace Console_RPG
 
             Location PizzaHut = new Location("Pizza Hut", "We're the pizza company that lives life unboxed. We have more than 16,000 restaurants and 350,000 team members in more than 100 countries. Whether it's the original Stuffed Crust or putting a pizza in outer space, we never stop driving ourselves to deliver hot pizzas, fast every time – anywhere you want to enjoy it.");
 
-            Location SweatShop = new Location("SweatShop", "How did we even end up here like the thing's they are doing here are Illeagal we should do something to stop this or we can just turn a blind eye to this so that you can keep getting you things off Temu™️");
+            Location SweatShop = new Location("Temu", "How did we even end up here like the thing's they are doing here are Illeagal we should do something to stop this or we can just turn a blind eye to this so that you can keep getting you things off Temu™️");
 
             TiltedTowers.SetNearbyLocations(north: AmazonWarehouse, east: McDonalds, south: TheBahamas, west: NukeTown2025);
-            KinoDerToten.SetNearbyLocations(north: Terminal, east: NukeTown2025, south: TheSkeld);
+            KinoDerToten.SetNearbyLocations(north: Terminal, east: NukeTown2025, south: TheSkeld, west: MidTown);
             VGDClassroom.SetNearbyLocations(east: StarryNight, west: GasStation);
-            GasStation.SetNearbyLocations(east: VGDClassroom, south: WoodlandMansion, west: PostCovidWalmart);
+            GasStation.SetNearbyLocations(north: Target, east: VGDClassroom, south: WoodlandMansion, west: PostCovidWalmart);
             WoodlandMansion.SetNearbyLocations(north: GasStation);
             PostCovidWalmart.SetNearbyLocations(north: PalletTown, east: GasStation, west: PreCovidWalmart);
-            PalletTown.SetNearbyLocations(south: PostCovidWalmart, west: StationSquare);
+            PalletTown.SetNearbyLocations(south: PostCovidWalmart, east: Target, west: StationSquare);
             PreCovidWalmart.SetNearbyLocations(north: StationSquare, east: PostCovidWalmart, south: FreddyFazbearsPizzaria, west: McDonalds);
+            Target.SetNearbyLocations(north: PizzaHut);
+            MidTown.SetNearbyLocations(east: KinoDerToten);
+            TheSkeld.SetNearbyLocations(north: KinoDerToten);
+            Terminal.SetNearbyLocations(east: UPSWarehouse, south: KinoDerToten);
+            PizzaHut.SetNearbyLocations(south: Target);
+            UPSWarehouse.SetNearbyLocations(east: AmazonWarehouse, south: NukeTown2025, west: Terminal);
+            AmazonWarehouse.SetNearbyLocations(north: SweatShop, east: FedExWarehouse, south: TiltedTowers, west: UPSWarehouse);
+            SweatShop.SetNearbyLocations(south: AmazonWarehouse);
+            FedExWarehouse.SetNearbyLocations(east: StationSquare, south: McDonalds, west: AmazonWarehouse);
+            NukeTown2025.SetNearbyLocations(north: UPSWarehouse, east: TiltedTowers, south: Antartica, west: KinoDerToten);
+            Antartica.SetNearbyLocations(north: NukeTown2025, east: TheBahamas);
+            TheBahamas.SetNearbyLocations(north: TiltedTowers, east: TheBatcave, south: TheBackrooms, west: Antartica);
+            TheBackrooms.SetNearbyLocations(north: TheBahamas);
+            StarryNight.SetNearbyLocations(west: VGDClassroom);
+            McDonalds.SetNearbyLocations(north: FedExWarehouse, east: PreCovidWalmart, south: TheBatcave, west: TiltedTowers);
+            TheBatcave.SetNearbyLocations(north: McDonalds, east: FreddyFazbearsPizzaria, south: SpidermansHouse, west: TheBahamas);
+            SpidermansHouse.SetNearbyLocations(north: TheBatcave);
+            FreddyFazbearsPizzaria.SetNearbyLocations(north: PreCovidWalmart, south: TheBatcave);
+            StationSquare.SetNearbyLocations(north: HighHarothgar, east: PalletTown, south: PreCovidWalmart, west: FedExWarehouse);
+            HighHarothgar.SetNearbyLocations(north: Sovngarde, south: StationSquare);
+            Sovngarde.SetNearbyLocations(south:HighHarothgar);
 
 
 
 
-            KinoDerToten.Resolve();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            StationSquare.Resolve();
 
 
 
