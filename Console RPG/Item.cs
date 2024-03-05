@@ -10,14 +10,16 @@ namespace Console_RPG
         public string name;
         public string description;
         public int shopPrice;
+        public int sellprice;
         public int maxAmount;
         
 
-        public Item(string name, string description, int shopPrice, int maxAmount)
+        public Item(string name, string description, int shopPrice, int sellPrice, int maxAmount)
         {
             this.name = name;
             this.description = description;
             this.shopPrice = shopPrice;
+            this.sellprice = sellPrice;
             this.maxAmount = maxAmount;
             
         }
@@ -26,6 +28,22 @@ namespace Console_RPG
 
         public abstract void Use(Entity user, Entity target);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
@@ -33,7 +51,7 @@ namespace Console_RPG
     {
         public int healAmount;
 
-        public HealthPotionItem(string name, string description, int shopPrice, int maxAmount, int healAmount) : base(name, description, shopPrice, maxAmount)
+        public HealthPotionItem(string name, string description, int shopPrice, int sellPrice, int maxAmount, int healAmount) : base(name, description, shopPrice, sellPrice, maxAmount)
         {
             this.healAmount = healAmount;
 
@@ -58,7 +76,7 @@ namespace Console_RPG
         public int ammo;
 
 
-        public ExplosiveRepeater(string name, string description, int shopPrice, int maxAmount, int damage, int ammo) : base(name, description, shopPrice, maxAmount)
+        public ExplosiveRepeater(string name, string description, int shopPrice, int sellPrice, int maxAmount, int damage, int ammo) : base(name, description, shopPrice, sellPrice, maxAmount)
         {
             this.damage = damage;
             this.ammo = ammo;
@@ -76,6 +94,11 @@ namespace Console_RPG
             --ammo;
 
         }
+
+
+
+
+
 
 
 

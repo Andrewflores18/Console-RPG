@@ -4,7 +4,7 @@
     {
         public int manaUpAmount;
 
-        public ManaPotionItem(string name, string description, int shopPrice, int maxAmount, int manaUpAmount) : base(name, description, shopPrice, maxAmount)
+        public ManaPotionItem(string name, string description, int shopPrice, int sellprice, int maxAmount, int manaUpAmount) : base(name, description, shopPrice, sellprice, maxAmount)
         {
             this.manaUpAmount = manaUpAmount;
 
