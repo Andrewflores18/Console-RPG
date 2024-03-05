@@ -9,8 +9,8 @@ namespace Console_RPG
 
 class Player : Entity
     {
-
-        public static List<Item> Inventory = new List<Item>();
+        public static List<Item> Inventory = new List<Item>() { Item.potion1, Item.Potion2 };
+        public static int CoinCount = 0;
 
 		public int Level;
 
@@ -37,7 +37,7 @@ class Player : Entity
 
         public Item ChooseItem(List<Item> choices)
         {
-            Console.WriteLine("Type in the number of an enemy you want to target");
+            Console.WriteLine("Type in the number of an Item you want to use");
 
             for (int i = 0; i < choices.Count; i++)
             {

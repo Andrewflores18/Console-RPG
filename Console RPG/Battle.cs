@@ -4,21 +4,21 @@ using System.Text;
 using System.Linq;
 namespace Console_RPG
 {
-    class Battle
+    class Battle : LocationPOI
     {
         public List<Enemy> enemies;
-        public bool isresolved;
 
-        public Battle(List<Enemy> enemies)
+
+        public Battle(List<Enemy> enemies) : base(false)
         {
             this.enemies = enemies;
-            this.isresolved = false;
+            
         }
 
 
 
 
-        public void Resolve(List<Player> players)
+        public override void Resolve(List<Player> players)
         {
             while (true)
             {
