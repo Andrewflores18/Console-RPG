@@ -6,7 +6,22 @@ namespace Console_RPG
 {
 class Enemy : Entity
     {
-		public int experienceDroppedOnDeath;
+        public static Enemy Undead1 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead2 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead3 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead4 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead5 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead6 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead7 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead8 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead9 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+        public static Enemy Undead10 = new Enemy("Undead", 100000000, 100000, new Stats(15, 7, 1), 1);
+
+        public static Enemy Slime = new Enemy("Slime", 100000000, 100000, new Stats(5, 6, 1), 1);
+
+
+
+        public int experienceDroppedOnDeath;
 
 		public Enemy(string name, int hp, int mana, Stats stats, int experienceDroppedOnDeath) : base(name, hp, mana, stats)
 		{
