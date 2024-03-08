@@ -7,22 +7,6 @@ namespace Console_RPG
         static void Main(string[] args)
         {
            
-            
-            
-          
-
-
-
-
-
-
-
-
-
-            
-
-
-
 
             Location.TiltedTowers.SetNearbyLocations(north: Location.AmazonWarehouse, east: Location.McDonalds, south: Location.TheBahamas, west: Location.NukeTown2025);
             Location.KinoDerToten.SetNearbyLocations(north: Location.Terminal, east: Location.NukeTown2025, south: Location.TheSkeld, west: Location.MidTown);
@@ -53,9 +37,6 @@ namespace Console_RPG
             Location.StationSquare.SetNearbyLocations(north: Location.HighHarothgar, east: Location.PalletTown, south: Location.PreCovidWalmart, west: Location.FedExWarehouse);
             Location.HighHarothgar.SetNearbyLocations(north: Location.Sovngarde, south: Location.StationSquare);
             Location.Sovngarde.SetNearbyLocations(south: Location.HighHarothgar);
-
-
-
 
 
 

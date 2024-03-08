@@ -7,7 +7,7 @@ namespace Console_RPG
     class Location
     {
 
-            public static Location KinoDerToten = new Location("Kino Det Toten", "Run down Theater full of undead");
+            public static Location KinoDerToten = new Location("Kino Det Toten", "Run down Theater full of undead", new Battle(new List<Enemy>() { Enemy.Undead1, Enemy.Undead2, Enemy.Undead3, Enemy.Undead4, Enemy.Undead5, Enemy.Undead6 }));
 
             public static Location TiltedTowers = new Location("Tilted Towers", "Busy shopping District try not to get boxed in and 250 pumped but you should try to get me a Durr Burger");
 
@@ -17,9 +17,9 @@ namespace Console_RPG
 
             public static Location McDonalds = new Location("McDonalds", "McDonald's is the world's largest fast food restaurant chain, serving over 69 million customers daily in over 100 countries in more than 40,000 outlets, maybe you could get me a Happy Meal?");
 
-            public static Location NukeTown2025 = new Location("NukeTown 2025", "A 1960s retro-futuristic Mid-Century modern style meant to represent the Home of the Future for 2025.");
+            public static Location NukeTown2025 = new Location("NukeTown 2025", "A 1960s retro-futuristic Mid-Century modern style meant to represent the Home of the Future for 2025.", new Battle(new List<Enemy>() { Enemy.Undead7, Enemy.Undead8, Enemy.Undead9, Enemy.Undead10 }));
 
-            public static Location WoodlandMansion = new Location("Woodland Mansion", "A Mansion hidden in the deep dark forest some say that it is just a myth and does not exist while others say they have seen it, they say that when they peered into the windows they felt something stare back.");
+            public static Location WoodlandMansion = new Location("Woodland Mansion", "A Mansion hidden in the deep dark forest some say that it is just a myth and does not exist while others say they have seen it, they say that when they peered into the windows they felt something stare back.", new Battle(new List<Enemy>() { Enemy.Evokers, Enemy.Vexes, Enemy.Vindicator }));
 
             public static Location PreCovidWalmart = new Location("Pre-Covid Walmart", "Open 24/7");
 
@@ -63,7 +63,7 @@ namespace Console_RPG
 
             public static Location SweatShop = new Location("Temu", "How did we even end up here like the thing's they are doing here are Illeagal we should do something to stop this or we can just turn a blind eye to this so that you can keep getting you things off Temu™️");
 
-            public static Location MidTown = new Location("MidTown", "Abandoned and eerie, people say something BIG is lurking in MidTown"); 
+            public static Location MidTown = new Location("MidTown", "Abandoned and eerie, people say something BIG is lurking in MidTown", new Battle(new List<Enemy>() { Enemy.LeonFerris, Enemy.Grunt1, Enemy.Grunt2})); 
 
         
 
