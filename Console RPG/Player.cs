@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 
 
 
@@ -9,7 +10,7 @@ namespace Console_RPG
 
 class Player : Entity
     {
-        public static Player Bread = new Player("", 350, 750, new Stats(10, 9, 7), 1);
+        public static Player Bread = new Player("Pingus", 350, 750, new Stats(10, 9, 7), 1);
 
         public static List<Item> Inventory = new List<Item>() { Item.potion1, Item.potion2, Item.potion2, Item.potion3, Item.potion2, Item.potion2, Item.potion3 };
         public static int CoinCount = 0;
@@ -56,8 +57,9 @@ class Player : Entity
         public override void Attack(Entity target)
     {
 		// figure out how to calculate the damage and subtract from the target's hp
-
-		Console.WriteLine(this.name + " attacked " + target.name + " ! ");
+        int damage = this.stats.strength - target.stats.strength;
+        int hp = target.currentHP -= damage;
+		Console.WriteLine($"{this.name} attacked {target.name} for {damage} amount of damage! {target.name} now has {target.currentHP} amount of Health");
     }
 
         public override void DoTurn(List<Player> players, List<Enemy> enemies)

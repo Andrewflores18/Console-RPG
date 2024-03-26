@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Console_RPG
 {
@@ -40,7 +41,7 @@ namespace Console_RPG
 
 
 
-            Location.StationSquare.Resolve();
+            Location.StationSquare.Resolve(new List<Player>() { Player.Bread });
 
 
 

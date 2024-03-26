@@ -108,7 +108,7 @@ namespace Console_RPG
 
         }
 
-        public void Resolve()
+        public void Resolve(List<Player> players)
         {
             Console.WriteLine("You find yourself in " + this.name + ".");
             Console.WriteLine(this.description);
@@ -152,7 +152,7 @@ namespace Console_RPG
                 nextLocation = this.west;
 
 
-            nextLocation.Resolve();
+            nextLocation.Resolve(players);
 
 
 
