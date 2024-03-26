@@ -25,9 +25,9 @@ namespace Console_RPG
             Location.AmazonWarehouse.SetNearbyLocations(north: Location.SweatShop, east: Location.FedExWarehouse, south: Location.TiltedTowers, west: Location.UPSWarehouse);
             Location.SweatShop.SetNearbyLocations(south: Location.AmazonWarehouse);
             Location.FedExWarehouse.SetNearbyLocations(east: Location.StationSquare, south: Location.McDonalds, west: Location.AmazonWarehouse);
-            Location.NukeTown2025.SetNearbyLocations(north: Location.UPSWarehouse, east: Location.TiltedTowers, south: Location.Antartica, west: Location.KinoDerToten);
-            Location.Antartica.SetNearbyLocations(north: Location.NukeTown2025, east: Location.TheBahamas);
-            Location.TheBahamas.SetNearbyLocations(north: Location.TiltedTowers, east: Location.TheBatcave, south: Location.TheBackrooms, west: Location.Antartica);
+            Location.NukeTown2025.SetNearbyLocations(north: Location.UPSWarehouse, east: Location.TiltedTowers, south: Location.Antarctica, west: Location.KinoDerToten);
+            Location.Antarctica.SetNearbyLocations(north: Location.NukeTown2025, east: Location.TheBahamas);
+            Location.TheBahamas.SetNearbyLocations(north: Location.TiltedTowers, east: Location.TheBatcave, south: Location.TheBackrooms, west: Location.Antarctica);
             Location.TheBackrooms.SetNearbyLocations(north: Location.TheBahamas);
             Location.StarryNight.SetNearbyLocations(west: Location.VGDClassroom);
             Location.McDonalds.SetNearbyLocations(north: Location.FedExWarehouse, east: Location.PreCovidWalmart, south: Location.TheBatcave, west: Location.TiltedTowers);
